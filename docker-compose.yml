@@ -1,8 +1,8 @@
 version: '3.9'
 services:
-  backendBoilerPslate:
+  backendboilerplate:
     build: .
-    container_name: backendBoilerPslate
+    container_name: backendboilerplate
     command: sh ./docker-entrypoint.sh
     restart: always
     ports:
