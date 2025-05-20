@@ -2,6 +2,7 @@
 import express, { Application } from 'express';
 import { SERVER_VARIABLES } from './config/EnvironmentalVariables';
 import Middleware from './utils/Middleware';
+import apis from './apis';
 
 // intialization of dependancies
 const SERVER_PORT = SERVER_VARIABLES.SERVER_PORT;
@@ -15,7 +16,7 @@ app.use((req, _res, next) => {
 	console.log(req.path);
 	next();
 });
-// app.use(apis);
+app.use(apis);
 
 //listening the server
 const server = () => {
